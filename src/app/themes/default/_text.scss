@@ -1,0 +1,33 @@
+@import "./fonts";
+
+* {
+  font-family: "Roboto";
+  margin: 5px 0px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Condensed";
+}
+
+p {
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+ul {
+  padding-left: 0px;
+  list-style-type: none;
+  li {
+    line-height: 160%;
+  }
+}
