@@ -3,7 +3,7 @@ import Docs from "./pages/docs";
 
 const App = () => {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route index exact path="/" element={<Docs />} />

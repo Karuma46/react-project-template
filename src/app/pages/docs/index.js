@@ -1,25 +1,26 @@
+import Buttons from "./components/buttons";
+import Colors from "./components/colors";
+import Forms from "./components/forms";
+import Typography from "./components/typography";
+
 const Docs = () => {
   return (
     <>
-      <div>
-        <h1>Header 1</h1>
-        <h2>Header 2</h2>
-        <h3>Header 3</h3>
-        <h4>Header 4</h4>
+      <div className="container py-5">
+        <div className="row my-4">
+          <div className="col card text-center py-5">
+            <h1>A React Project Style Guide</h1>
+            <p>
+              A great place to start create the theme for your next react
+              project
+            </p>
+          </div>
+        </div>
 
-        <a href="/">Link</a>
-
-        <p>
-          The quick brown fox jumps over the lazy dog. DJs flock by when MTV ax
-          quiz prog. Jnk MTV quiz graced by foz whelps. Bawds jog, flick quartz,
-          vex nymphs. Waltz, bad nymph
-        </p>
-
-        <ul>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>List Item 3</li>
-        </ul>
+        <Colors />
+        <Typography />
+        <Buttons />
+        <Forms />
       </div>
     </>
   );

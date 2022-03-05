@@ -1,0 +1,26 @@
+$black: #000000;
+$light: #f8f8f8;
+$white: #ffffff;
+$grey: #cccccc;
+
+.blackBg {
+  background-color: $black;
+}
+
+.lightBg {
+  background-color: $light;
+}
+
+.whiteBg {
+  background-color: $white;
+}
+
+.greyBg {
+  background-color: $grey;
+}
+
+.colorBox {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}

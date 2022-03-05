@@ -1,9 +1,17 @@
+@import "../../../../node_modules/bootstrap/scss/utilities";
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 @import "./colors";
 @import "./text";
 @import "./icons";
 @import "./formInputs";
 @import "./buttons";
+@import "./cards";
+
+html {
+  padding: 0px;
+}
 
 body {
-  background: lightblue;
+  background-color: $grey;
 }
