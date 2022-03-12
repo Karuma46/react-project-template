@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 
 const Selectinput = (props) => {
   return (
-    <div>
+    <div className="inputDiv">
       {props.label && <label htmlFor={props.id}>{props.label}:</label>}
       <select onChange={props.onChange} id={props.id}>
         {props.options &&

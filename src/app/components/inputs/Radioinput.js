@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 
 const Radioinput = (props) => {
   return (
-    <div>
+    <div className="inputDiv radio">
       <label htmlFor={props.id}>{props.label}</label>
       {props.options &&
         props.options.map((item) => (
@@ -14,6 +14,13 @@ const Radioinput = (props) => {
               onChange={props.onChange}
               key={props.value}
             />
+            <span>
+              {
+                props.value === item.value ? 
+                ( <i className="bi-check-circle" />) :
+                (<i className="bi-circle" />)
+              }
+            </span> &nbsp;
             <span>{item.name}</span>
           </div>
         ))}

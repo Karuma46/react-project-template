@@ -2,8 +2,17 @@ import propTypes from "prop-types";
 
 const Checkbox = (props) => {
   return (
-    <div>
-      <input type="checkbox" {...props} />
+    <div className="inputDiv checkbox">
+      <input type="checkbox" {...props} id={props.id} checked />
+      <span className="checkboxIcon">
+        {
+          props.checked ? (
+            <i className="bi-check-square" />
+          ) : (
+            <i className="bi-square" />
+          )
+        }
+      </span> &nbsp;
       <span>{props.name}</span>
     </div>
   );

@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 
 const Textinput = (props) => {
   return (
-    <div>
+    <div className="inputDiv">
       {props.label && <label htmlFor={props.id}>{props.label}:</label>}
       <input type="text" {...props} />
     </div>
