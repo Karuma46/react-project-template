@@ -1,19 +1,40 @@
 @import "./fonts";
+@import "./colors";
 
 * {
-  font-family: "Roboto";
+  font-family: "Source Sans Pro";
   margin: 5px 0px;
 }
 
+.textPrimary {
+  color: $primary;
+}
+
+.textAccent1 {
+  color: $accent1;
+}
+
+.textAccent2 {
+  color: $accent2;
+}
+
 h1,
-h2,
+h2 {
+  font-family: "Oswald";
+}
+
+h1 {
+  font-weight: 100;
+}
+
 h3,
 h4 {
-  font-family: "Roboto Condensed";
+  font-family: "Source Sans Pro";
+  font-weight: 600;
 }
 
 p {
-  font-family: "Roboto";
+  font-family: "Source Sans Pro";
 }
 
 a {
@@ -24,7 +45,8 @@ a {
   margin: 10px 0px;
 }
 
-ul {
+ul,
+ol {
   padding-left: 0px;
   list-style-type: none;
   li {

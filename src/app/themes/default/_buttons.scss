@@ -1,0 +1,37 @@
+button {
+  border: none;
+  padding: 10px 15px;
+  font-family: "Oswald";
+  cursor: pointer;
+}
+
+.primaryBtn {
+  background-color: $primary;
+  color: $light;
+  &:hover {
+    background-color: $accent2;
+  }
+}
+
+.secondaryBtn {
+  background-color: $light;
+  color: $primary;
+  border: 2px solid $primary;
+  &:hover {
+    background-color: $accent2;
+    color: $light;
+  }
+}
+
+.inactiveBtn {
+  cursor: not-allowed;
+}
+
+.textBtn {
+  color: $primary;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}

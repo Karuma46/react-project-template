@@ -1,67 +1,29 @@
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf");
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-ExtraLight.ttf");
   font-weight: 100;
 }
 
 @font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-LightItalic.ttf");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-Italic.ttf");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
-  src: url("../../assets/fonts/Roboto_Condensed/RobotoCondensed-BoldItalic.ttf");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
-  font-style: normal;
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
-  font-style: normal;
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Medium.ttf");
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-Medium.ttf");
   font-weight: 500;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto/Roboto-Italic.ttf");
-  font-weight: 300;
-  font-style: italic;
+  font-family: "Oswald";
+  src: url("./fonts/Oswald/static/Oswald-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
+  font-weight: 600;
 }

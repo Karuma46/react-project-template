@@ -1,0 +1,22 @@
+.inputDiv {
+  label {
+    display: block;
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+  }
+  input,
+  select {
+    padding: 5px 10px;
+    font-family: "Source Sans Pro";
+    border: 2px solid $dark;
+  }
+}
+
+.checkbox,
+.radio {
+  input {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+  }
+}

@@ -1,22 +1,32 @@
-$black: #000000;
-$light: #f8f8f8;
-$white: #ffffff;
-$grey: #cccccc;
+$primary: #ae0721;
+$accent1: #b4cded;
+$accent2: #9d071d;
+
+$light: #eff7cf;
+$dark: #474647;
+
+.primaryBg {
+  background-color: $primary;
+}
 
 .blackBg {
   background-color: $black;
 }
 
+.accent1Bg {
+  background-color: $accent1;
+}
+
+.accent2Bg {
+  background-color: $accent2;
+}
+
+.darkBg {
+  background-color: $dark;
+}
+
 .lightBg {
   background-color: $light;
-}
-
-.whiteBg {
-  background-color: $white;
-}
-
-.greyBg {
-  background-color: $grey;
 }
 
 .colorBox {
