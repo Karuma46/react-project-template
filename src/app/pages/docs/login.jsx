@@ -3,6 +3,8 @@ import { useFormik } from "formik";
 import Textinput from "app/components/inputs/Textinput";
 import { Button } from "app/components/buttons";
 import * as Yup from "yup";
+import Api from "app/config/api";
+import { useMutation } from "react-query";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -11,13 +13,17 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = () => {
+  const mutation = useMutation((values) =>
+    Api.post("/rest-auth/login/", values)
+  );
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      mutation.mutate(values);
     },
     validationSchema: LoginSchema,
   });
@@ -46,7 +52,8 @@ const Login = () => {
           onBlur={formik.handleBlur}
           touched={formik.touched.password}
         />
-
+        {mutation.isLoading && <p>Please Wait...</p>}
+        {mutation.isError && <p>{mutation.error.message}</p>}
         <Button name="login" type="submit" />
       </form>
     </div>

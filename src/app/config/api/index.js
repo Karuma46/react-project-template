@@ -20,24 +20,24 @@ const getInstance = ({ useHeader = true }) => {
   });
 };
 
-const put = async ({ url, data }) => {
+const put = async (url, data) => {
   return await getInstance().put(url, data);
 };
 
-const patch = async ({ url, data }) => {
+const patch = async (url, data) => {
   return await getInstance().patch(url, data);
 };
 
-const remove = async ({ url, data }) => {
+const remove = async (url, data) => {
   return await getInstance().delete(url, data);
 };
 
-const get = async ({ url, params }) => {
+const get = async (url, params) => {
   return await getInstance({}).get(url, params);
 };
 
-const post = async ({ url, data, useHeader }) => {
-  return await getInstance({ useHeader: useHeader }).post(url, data);
+const post = async (url, data) => {
+  return await getInstance({}).post(url, data);
 };
 
 const Api = {

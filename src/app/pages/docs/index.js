@@ -2,6 +2,7 @@ import Buttons from "./components/buttons";
 import Colors from "./components/colors";
 import Forms from "./components/forms";
 import Typography from "./components/typography";
+import Login from "./login";
 
 const Docs = () => {
   return (
@@ -16,11 +17,11 @@ const Docs = () => {
             </p>
           </div>
         </div>
-
-        <Colors />
+        <Login/>
+        {/* <Colors />
         <Typography />
         <Buttons />
-        <Forms />
+        <Forms /> */}
       </div>
     </>
   );
