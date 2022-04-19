@@ -1,8 +1,14 @@
 import propTypes from "prop-types";
+import { useEffect } from "react/cjs/react.development";
 
 export const Button = (props) => {
+  
+
   return (
-    <button onClick={props.onClick} className={`${props.className}`}>
+    <button
+      onClick={props.onClick}
+      className={`${props.className}`}
+      type={props.type}>
       {props.loading ? (
         <i className="bi-arrow-repeat spinner d-block" />
       ) : (
@@ -16,6 +22,7 @@ export const Button = (props) => {
 };
 
 Button.prototypes = {
-  name: propTypes.string,
+  name: propTypes.string.isRequired,
   onClick: propTypes.func,
+  type: propTypes.string.isRequired,
 };
