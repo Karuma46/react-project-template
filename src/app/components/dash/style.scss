@@ -1,0 +1,41 @@
+.lightShadow {
+  box-shadow: 0px 0px 2px rgba($color: #000000, $alpha: 0.1);
+}
+
+#sidebar {
+  background-color: white;
+  transition: width 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+  height: 100vh;
+  @extend .lightShadow;
+}
+
+$topbarheight: 60px;
+
+.short-sidebar {
+  width: $topbarheight;
+}
+
+.topbar {
+  height: $topbarheight;
+  width: 100%;
+  background-color: #fff;
+  @extend .lightShadow;
+}
+
+.mainarea {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.mainContent {
+  width: 100%;
+  height: 2000px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  @extend .lightShadow;
+  border-radius: 10px;
+}
