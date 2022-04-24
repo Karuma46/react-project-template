@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import Textinput from "app/components/inputs/Textinput";
 import { Button } from "app/components/buttons";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { AuthContext } from "../context";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
@@ -11,6 +13,8 @@ const LoginSchema = Yup.object().shape({
 });
 
 const LoginForm = ({ mutation }) => {
+  const { setIsAuth } = useContext(AuthContext);
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -20,6 +24,7 @@ const LoginForm = ({ mutation }) => {
       mutation.mutate(values, {
         onSuccess: (data) => {
           localStorage.setItem("auth_token", data.data.key);
+          setIsAuth(true);
         },
       });
     },

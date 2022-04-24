@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthContext } from "./pages/auth/context";
-import Docs from "./pages/docs";
+import { AuthContextProvider } from "./pages/auth/context";
+
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import DashBoardTemplate from "./components/dash";
+
+import Home from "./pages";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -11,11 +12,13 @@ const App = () => {
   return (
     <div>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <Routes>
-            <Route index exact path="/" element={<DashBoardTemplate />} />
-          </Routes>
-        </BrowserRouter>
+        <AuthContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route index exact path="/" element={<Home />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthContextProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </div>

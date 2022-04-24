@@ -10,19 +10,24 @@ export const AuthContextProvider = ({ children }) => {
 
 const useAuthProvider = () => {
   const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const [isAuth, setIsAuth] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsLoading(true);
     Api.get("users/is_auth/")
       .then((res) => {
+        setIsLoading(false);
         setUser(res.data);
         setIsAuth(true);
+        setError(null);
       })
       .catch((Error) => {
-        console.log(Error);
+        setError(Error);
+        setIsLoading(false);
       });
-    console.log("authcontext");
-  }, []);
+  }, [isAuth]);
 
-  return { user, isAuth, setIsAuth };
+  return { user, isAuth, setIsAuth, isLoading, error };
 };

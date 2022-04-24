@@ -13,7 +13,7 @@ const getHeaders = () => {
 };
 
 const getInstance = ({ useHeader = true }) => {
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_APP_URL;
   return axios.create({
     baseURL: apiUrl,
     headers: useHeader ? getHeaders() : null,
