@@ -1,35 +1,33 @@
-import React from "react";
-import { useFormik } from "formik";
 import Textinput from "app/components/inputs/Textinput";
 import { Button } from "app/components/buttons";
+import { useFormik } from "formik";
 import * as Yup from "yup";
-import Api from "app/config/api";
-import { useMutation } from "react-query";
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string()
     .required("This field is required.")
     .email("Please input a valid email"),
+  password: Yup.string().required("This field is required"),
 });
 
-const Login = () => {
-  const mutation = useMutation((values) =>
-    Api.post("/dj-rest-auth/login/", values)
-  );
-
+const LoginForm = ({ mutation }) => {
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     onSubmit: (values) => {
-      mutation.mutate(values);
+      mutation.mutate(values, {
+        onSuccess: (data) => {
+          localStorage.setItem("auth_token", data.data.key);
+        },
+      });
     },
     validationSchema: LoginSchema,
   });
 
   return (
-    <div>
+    <>
       <form onSubmit={formik.handleSubmit}>
         <h2>Login Form</h2>
         <Textinput
@@ -56,7 +54,8 @@ const Login = () => {
         {mutation.isError && <p>{mutation.error.message}</p>}
         <Button name="login" type="submit" />
       </form>
-    </div>
+    </>
   );
 };
-export default Login;
+
+export default LoginForm;
